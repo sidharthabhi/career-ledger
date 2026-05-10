@@ -1,0 +1,153 @@
+/* Role list */
+.role-list { display: flex; flex-direction: column; }
+
+.role-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.role-row:last-child { border-bottom: none; }
+
+.role-name {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.role-bar {
+  width: 160px;
+  height: 4px;
+  background: var(--bg-2);
+  position: relative;
+}
+
+.role-bar > div {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s ease-out;
+}
+
+.role-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-dim);
+  text-align: right;
+}
+.role-count strong {
+  display: block;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Funnel stats */
+.funnel-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.fstat-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--ink-faint);
+  margin-bottom: 8px;
+}
+
+.fstat-val {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.fstat-val.warn { color: var(--warn); }
+.fstat-val.good { color: var(--good); }
+
+.fstat-pct {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-dim);
+  margin-top: 6px;
+}
+
+/* Tag cloud */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--ink-dim);
+  transition: all 0.15s;
+  opacity: var(--tag-weight, 1);
+  cursor: default;
+}
+
+.tag:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--panel);
+  opacity: 1;
+}
+
+.tag-count {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Per-role keyword block */
+.role-keywords {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.role-keyword-block {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.role-keyword-block:last-child { border-bottom: none; padding-bottom: 0; }
+.role-keyword-block:first-child { padding-top: 0; }
+
+.role-keyword-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.role-keyword-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 800px) {
+  .funnel-stats { grid-template-columns: 1fr; gap: 16px; }
+  .role-bar { width: 100px; }
+}
