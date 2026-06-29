@@ -4,7 +4,7 @@ A full-stack SaaS for tracking job applications through their lifecycle — from
 
 **Live:** https://career-ledger-taupe.vercel.app
 
-> ⚠️ Before you commit this: check every line against your actual code. Remove anything the repo doesn't do. An accurate short README beats an impressive wrong one.
+
 
 ---
 
