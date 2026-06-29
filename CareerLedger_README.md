@@ -67,7 +67,6 @@ Set your environment variables (database URL, JWT secret) in a `.env` file — s
 | PUT | `/applications/{id}` | Update stage/details |
 | DELETE | `/applications/{id}` | Remove an application |
 
-*(Adjust these to match your real routes.)*
 
 ## Notes
 
